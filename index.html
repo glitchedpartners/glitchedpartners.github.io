@@ -1,120 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Solaré Installations</title>
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-line-height: 1.6;
-color: #333;
-background-color: #f4f4f4;
-}
-header, section {
-padding: 40px 20px;
-max-width: 900px;
-margin: auto;
-}
-header {
-background: linear-gradient(135deg, #f9a825, #fdd835);
-color: white;
-text-align: center;
-}
-header h1 {
-margin-bottom: 10px;
-font-size: 2.5em;
-}
-header p {
-font-size: 1.2em;
-}
-button {
-background: #2e7d32;
-color: white;
-border: none;
-padding: 12px 20px;
-font-size: 1em;
-margin-top: 20px;
-cursor: pointer;
-border-radius: 6px;
-}
-section h2 {
-color: #2e7d32;
-}
-.packages, .testimonials {
-background: white;
-border-radius: 8px;
-padding: 20px;
-margin-top: 20px;
-}
-.contact a {
-display: inline-block;
-background: #2e7d32;
-color: white;
-padding: 12px 20px;
-border-radius: 6px;
-text-decoration: none;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solaré Installations</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/169/169367.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --solar-gold: #f9a825;
+      --solar-yellow: #fdd835;
+      --solar-dark: #222;
+      --solar-white: #fff;
+      --solar-green: #2e7d32;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(to bottom, #fffbea, #e0f7fa);
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, var(--solar-gold), var(--solar-yellow));
+      color: var(--solar-dark);
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    header h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    header button {
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: var(--solar-green);
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    header button:hover {
+      background: #1b5e20;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    section h2 {
+      font-size: 2em;
+      color: var(--solar-green);
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .packages, .testimonials, .contact {
+      background: var(--solar-white);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      margin-top: 30px;
+    }
+    .testimonials blockquote {
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 4px solid var(--solar-green);
+      font-style: italic;
+    }
+    .contact a {
+      display: inline-block;
+      background: var(--solar-green);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>Switch to Solar. Save Big. Go Solaré.</h1>
-<p>Reliable, customized solar installations for homes & businesses in Islamabad and Rawalpindi.</p>
-<p>☀️ Net Metering &bull; 🔌 Hybrid Systems &bull; 💰 Guaranteed Savings</p>
-<a href="https://wa.me/923390015006"><button>Book a Free Site Survey</button></a>
-</header>
-
-<section>
-<h2>About Us</h2>
-<p>At <strong>Solaré Installations</strong>, we believe every family deserves energy independence, affordability, and peace of mind.
-We’re a new-age solar startup based in Islamabad, offering clean, affordable energy with unmatched transparency and service.</p>
-</section>
-
-<section>
-<h2>Our Services</h2>
-<ul>
-<li><strong>On-Grid Systems:</strong> For homes looking to reduce electricity bills.</li>
-<li><strong>Hybrid Systems:</strong> Battery backup + grid connectivity.</li>
-<li><strong>Net Metering:</strong> Full support with IESCO documentation.</li>
-<li><strong>Custom Installations:</strong> Inspection, sizing & execution.</li>
-<li><strong>Post-Install Support:</strong> Ongoing system checkups and help.</li>
-</ul>
-</section>
-
-<section>
-<h2>Why Choose Solaré?</h2>
-<ul>
-<li>Local, hands-on team = Personalized service</li>
-<li>Transparent pricing = No hidden costs</li>
-<li>Co-founder involvement = Accountability</li>
-<li>Islamic values = Trustworthy, ethical business</li>
-<li>Free consultation = Risk-free start</li>
-</ul>
-</section>
-
-<section class="packages">
-<h2>Packages (Estimated)</h2>
-<ul>
-<li><strong>3kW On-Grid:</strong> ₨460,000–₨500,000</li>
-<li><strong>5kW Hybrid:</strong> ₨790,000–₨860,000</li>
-<li><strong>10kW Net Metering Pro:</strong> ₨1,380,000–₨1,520,000</li>
-</ul>
-<p><em>Final cost depends on structure, panels, and inverter choice.</em></p>
-</section>
-
-<section class="testimonials">
-<h2>Client Feedback</h2>
-<p>“The Solaré team was very professional. They helped us size our system right, explained everything, and followed up even after install.”<br> <em>-- Ayesha I., G-13</em></p>
-<p>“We were confused about net metering. They made it simple, affordable, and fast. Highly recommended.”<br> <em>-- Bilal R., Satellite Town</em></p>
-</section>
-
-<section class="contact">
-<h2>Contact Us</h2>
-<p>Ready to go solar? Let’s talk.</p>
-<a href="https://wa.me/923390015006">Book via WhatsApp</a>
-<p>Email: <a href="mailto:solare.installations@gmail.com">solare.installations@gmail.com</a></p>
-</section>
+  <header>
+    <h1>Cut Your Electricity Bill — Forever.</h1>
+    <p><strong>Solaré</strong> brings affordable, guaranteed solar installations to homes & businesses in Islamabad & Rawalpindi — complete with Net Metering, Hybrid Systems, and Expert Support.</p>
+    <p>✅ Lower Bills • ✅ Own Your Power • ✅ Peace of Mind</p>
+    <a href="https://wa.me/923390015006"><button>Book Your Free Solar Assessment</button></a>
+  </header>  <section>
+    <h2>About Solaré</h2>
+    <p>We're a locally owned solar installation company with a clear mission: to help families and businesses take control of their energy bills with transparent, ethical, and expertly managed solar systems. Our founders are hands-on engineers — not just marketers — and every project gets personal attention.</p>
+  </section>  <section>
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>🔌 On-Grid Systems:</strong> Best for homes with stable grid power — reduce bills up to 90%.</li>
+      <li><strong>🔋 Hybrid Systems:</strong> Combines battery + grid — ideal for loadshedding zones.</li>
+      <li><strong>📄 Net Metering:</strong> We handle the paperwork. You sell power back to IESCO.</li>
+      <li><strong>🏡 Custom Designs:</strong> Rooftop? Shed? Commercial? We optimize for your space and load.</li>
+      <li><strong>🔧 After-Sale Support:</strong> Ongoing checkups, inverter monitoring, and system tuning.</li>
+    </ul>
+  </section>  <section>
+    <h2>Why People Choose Solaré</h2>
+    <ul>
+      <li>✔️ <strong>Local & Personalized:</strong> Islamabad-based team, not outsourced middlemen.</li>
+      <li>✔️ <strong>Transparent Pricing:</strong> No hidden charges. Every quote itemized.</li>
+      <li>✔️ <strong>Hands-On Founders:</strong> You’ll deal with people who understand engineering, not just sales.</li>
+      <li>✔️ <strong>Ethical Approach:</strong> Islamic business values guide our decisions — fairness, truth, responsibility.</li>
+      <li>✔️ <strong>Full Support:</strong> From site survey to net metering approval, we’re with you at every step.</li>
+    </ul>
+  </section>  <section class="packages">
+    <h2>Popular Packages</h2>
+    <ul>
+      <li><strong>3kW On-Grid</strong> — ₨460,000–₨500,000<br><small>Ideal for 2–3 AC homes. Saves ~₨15,000/month.</small></li>
+      <li><strong>5kW Hybrid</strong> — ₨790,000–₨860,000<br><small>Runs essentials during loadshedding. Backup + billing relief.</small></li>
+      <li><strong>10kW Net Metering Pro</strong> — ₨1,380,000–₨1,520,000<br><small>Sell excess power. Full home coverage.</small></li>
+    </ul>
+    <p><em>Prices include panels, inverter, structure, wiring & installation. Final cost depends on site.</em></p>
+  </section>  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote>“They explained everything clearly, helped us get net metering done fast, and followed up after install. Highly recommended.”<br><em>– Ayesha I., G-13 Islamabad</em></blockquote>
+    <blockquote>“I got a 5kW system installed for my office. Very clean work, responsive team, and no billing surprises.”<br><em>– Bilal R., Satellite Town Rawalpindi</em></blockquote>
+  </section>  <section class="contact">
+    <h2>Book Your Free Site Visit</h2>
+    <p>We’ll inspect your roof, recommend the best system, and give you a written quote — no obligation.</p>
+    <a href="https://wa.me/923390015006">📞 WhatsApp Our Team</a><br>
+    <p>Or email: <a href="mailto:solare.installations@gmail.com">solare.installations@gmail.com</a></p>
+  </section>  <footer>
+    &copy; 2025 Solaré Installations. All rights reserved.
+  </footer>
 </body>
 </html>
