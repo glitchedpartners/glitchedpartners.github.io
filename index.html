@@ -24,112 +24,148 @@
   <meta name="twitter:image" content="https://yourdomain.com/assets/og-banner.jpg" />
 
   <style>
+    :root {
+      --primary: #fdcb00;
+      --secondary: #174c3c;
+      --tertiary: #e0e0e0;
+      --text: #1b1b1b;
+      --background: #fdfdfd;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      color: #333;
-      background-color: #f4f4f4;
+      background-color: var(--background);
+      color: var(--text);
     }
-    header, section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+
     header {
-      background: url('https://images.unsplash.com/photo-1581091215367-59aa1bde3d74?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(23, 76, 60, 0.9)), url('https://images.unsplash.com/photo-1606060027601-e3fdf7f1fc57?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
+      padding: 80px 20px;
     }
+
     header h1 {
+      font-size: 2.8em;
       margin-bottom: 10px;
-      font-size: 2.5em;
-      background: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 10px;
     }
+
     header p {
       font-size: 1.2em;
-      background: rgba(0,0,0,0.4);
-      display: inline-block;
-      padding: 5px;
     }
+
     button {
-      background: #2e7d32;
-      color: white;
+      background-color: var(--primary);
+      color: #000;
       border: none;
-      padding: 12px 20px;
+      padding: 12px 24px;
+      margin-top: 20px;
       font-size: 1em;
-      margin-top: 20px;
       cursor: pointer;
-      border-radius: 6px;
+      border-radius: 5px;
     }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
     section h2 {
-      color: #2e7d32;
+      color: var(--secondary);
+      border-left: 6px solid var(--primary);
+      padding-left: 12px;
+      margin-bottom: 20px;
     }
-    .packages, .testimonials, .faq {
-      background: white;
-      border-radius: 8px;
+
+    .highlight-section {
+      background-color: var(--tertiary);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .packages ul,
+    .testimonials p,
+    .faq ul,
+    .services ul {
+      background-color: #fff;
       padding: 20px;
-      margin-top: 20px;
+      border-radius: 8px;
     }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
     .contact a {
       display: inline-block;
-      background: #2e7d32;
+      background-color: var(--secondary);
       color: white;
       padding: 12px 20px;
       border-radius: 6px;
       text-decoration: none;
     }
-    .how-it-works {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 40px auto;
     }
-    .step {
-      flex: 1 1 250px;
-      margin: 10px;
-      background: #e8f5e9;
-      padding: 15px;
-      border-radius: 8px;
+
+    .form-container h2 {
+      margin-bottom: 20px;
     }
-    .partner-logos img {
-      max-width: 100px;
-      margin: 10px;
-      filter: grayscale(100%);
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-container button {
+      background-color: var(--primary);
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Switch to Solar. Save Big. Go Solaré.</h1>
     <p>Reliable, customized solar installations for homes & businesses in Islamabad and Rawalpindi.</p>
-    <p>Net Metering • Hybrid Systems • Guaranteed Savings</p>
     <a href="https://wa.me/923390015006"><button>Book a Free Site Survey</button></a>
   </header>
 
   <section>
     <h2>About Us</h2>
-    <p>At <strong>Solaré Installations</strong>, we believe every family deserves energy independence, affordability, and peace of mind.
-    We’re a new-age solar startup based in Islamabad, offering clean, affordable energy with unmatched transparency and service.</p>
-  </section>
-
-  <section>
-    <h2>How It Works</h2>
-    <div class="how-it-works">
-      <div class="step">
-        <h3>1. Free Site Visit</h3>
-        <p>We visit your location to assess sunlight, load needs, and structure.</p>
-      </div>
-      <div class="step">
-        <h3>2. Custom Quote</h3>
-        <p>We tailor the system to your energy usage, budget, and roof design.</p>
-      </div>
-      <div class="step">
-        <h3>3. Installation & Support</h3>
-        <p>We install, enable net metering, and provide after-sales checkups.</p>
-      </div>
-    </div>
+    <p><strong>Solaré Installations</strong> is led by engineers with a passion for delivering reliable, affordable, and ethical solar energy solutions. We bring professional expertise, on-ground experience, and full post-installation support for homes and businesses in Islamabad and Rawalpindi.</p>
   </section>
 
   <section>
@@ -144,13 +180,13 @@
   </section>
 
   <section>
-    <h2>Why Choose Solaré</h2>
+    <h2>Why Choose Solaré?</h2>
     <ul>
-      <li><strong>Engineered Solutions, Not Guesswork:</strong> Every system we install is backed by <strong>engineering judgment</strong>, not assumptions — designed for your exact <strong>energy profile</strong>, <strong>roof structure</strong>, and <strong>ROI goals</strong>.</li>
-      <li><strong>Transparent, Documented Process:</strong> From site assessment to final activation, you’ll receive <strong>full visibility</strong>: <strong>pricing breakdowns</strong>, <strong>schematics</strong>, and <strong>documentation</strong> — no hidden charges.</li>
-      <li><strong>Long-Term Reliability, Not Just Installations:</strong> We go beyond wiring panels — we offer <strong>lifecycle service</strong>, <strong>system performance tracking</strong>, and <strong>future upgrade support</strong>.</li>
-      <li><strong>Founders You Can Speak To:</strong> Our co-founders lead every project with <strong>on-ground involvement</strong>. That means <strong>direct accountability</strong>, clear communication, and <strong>decisions made in your best interest</strong>.</li>
-      <li><strong>Ethical, Client-Centered Ethos:</strong> Built on values of <strong>professionalism</strong>, <strong>honesty</strong>, and <strong>consistency</strong> — we take pride in delivering a service that earns your trust <strong>before, during, and after installation</strong>.</li>
+      <li><strong>Engineer-led execution</strong> – Technical accuracy from sizing to wiring.</li>
+      <li><strong>Local presence</strong> – Full service across Islamabad & Rawalpindi.</li>
+      <li><strong>Transparent pricing</strong> – No upsells or hidden charges.</li>
+      <li><strong>Accountability</strong> – Co-founders stay involved with every project.</li>
+      <li><strong>Post-install support</strong> – We’re with you beyond installation.</li>
     </ul>
   </section>
 
@@ -170,30 +206,43 @@
     <p>“We were confused about net metering. They made it simple, affordable, and fast. Highly recommended.”<br> <em>-- Bilal R., Satellite Town</em></p>
   </section>
 
-  <section class="faq">
-    <h2>FAQs</h2>
-    <ul>
-      <li><strong>How long does installation take?</strong> 2–4 days depending on size and approvals.</li>
-      <li><strong>What is net metering?</strong> It allows you to send extra solar power to the grid and earn credits.</li>
-      <li><strong>Is battery backup necessary?</strong> Only if you need power during outages.</li>
-      <li><strong>What areas do you serve?</strong> Islamabad, Rawalpindi, Wah, Taxila, and nearby towns.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Our Trusted Equipment Partners</h2>
-    <div class="partner-logos">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Longi_Solar_logo.svg" alt="Longi Logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Growatt_logo.svg" alt="Growatt Logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/JA_Solar_logo.svg" alt="JA Solar Logo">
-    </div>
-  </section>
-
   <section class="contact">
     <h2>Contact Us</h2>
     <p>Ready to go solar? Let’s talk.</p>
     <a href="https://wa.me/923390015006">Book via WhatsApp</a>
     <p>Email: <a href="mailto:solare.installations@gmail.com">solare.installations@gmail.com</a></p>
   </section>
+
+  <section class="form-container">
+    <h2>Get in Touch</h2>
+    <form action="https://formspree.io/f/xdkzbbre" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="bill">Average Monthly Electricity Bill (₨)</label>
+        <input type="number" id="bill" name="bill" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Additional Message</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <button type="submit">Send Inquiry</button>
+    </form>
+  </section>
+
 </body>
-                                                                                                                                                 </html>
+        </html>
