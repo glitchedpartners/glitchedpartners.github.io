@@ -9,6 +9,7 @@
   <meta name="keywords" content="solar panels Islamabad, hybrid solar system Pakistan, net metering IESCO, solaré installations, solar Rawalpindi, solar system price, on-grid solar">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Solaré Installations">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #fdcb00;
@@ -19,8 +20,9 @@
     }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      font-size: 1.05em;
       background-color: var(--background);
       color: var(--text);
       scroll-behavior: smooth;
@@ -29,23 +31,21 @@
       background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(23, 76, 60, 0.9)), url('https://images.unsplash.com/photo-1606060027601-e3fdf7f1fc57?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 80px 20px;
-      opacity: 0;
-      transform: translateY(30px);
+      padding: 100px 20px;
       animation: fadeInUp 1.2s ease-out forwards;
     }
     header h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       margin-bottom: 10px;
     }
     header p {
-      font-size: 1.2em;
+      font-size: 1.3em;
     }
     button {
       background-color: var(--primary);
       color: #000;
       border: none;
-      padding: 12px 24px;
+      padding: 14px 28px;
       margin-top: 20px;
       font-size: 1em;
       cursor: pointer;
@@ -57,18 +57,19 @@
     }
     section {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 60px auto;
       padding: 0 20px;
       opacity: 0;
       transform: translateY(40px);
       animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.3s;
+      animation-delay: 0.2s;
     }
     section h2 {
       color: var(--secondary);
       border-left: 6px solid var(--primary);
       padding-left: 12px;
       margin-bottom: 20px;
+      font-size: 1.8em;
     }
     .highlight-section {
       background-color: var(--tertiary);
@@ -76,15 +77,7 @@
       border-radius: 10px;
     }
     ul li {
-      margin-bottom: 12px;
-    }
-    .contact a {
-      display: inline-block;
-      background-color: var(--secondary);
-      color: white;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
+      margin-bottom: 14px;
     }
     .form-container {
       background: #fff;
@@ -92,11 +85,11 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       max-width: 700px;
-      margin: 40px auto;
+      margin: 60px auto;
       opacity: 0;
       transform: translateY(40px);
       animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.6s;
+      animation-delay: 0.4s;
     }
     .form-group {
       margin-bottom: 15px;
@@ -140,14 +133,17 @@
         transform: translateY(0);
       }
     }
-    img[loading="lazy"] {
-      max-height: 24px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
   </style>
 </head>
 <body>
+<nav style="position:sticky;top:0;background:#fff;padding:12px 20px;z-index:1000;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:space-between;">
+  <strong style="font-size:1.2em;color:#174c3c;">Solaré</strong>
+  <div>
+    <a href="#services" style="margin-left:20px;text-decoration:none;color:#174c3c;">Services</a>
+    <a href="#packages" style="margin-left:15px;text-decoration:none;color:#174c3c;">Packages</a>
+    <a href="#contact" style="margin-left:15px;text-decoration:none;color:#174c3c;">Contact</a>
+  </div>
+</nav>
   <header>
     <h1>Switch to Solar. Save Big. Go Solaré.</h1>
     <p>Reliable, customized solar installations for homes & businesses in Islamabad and Rawalpindi.</p>
@@ -155,30 +151,65 @@
   </header>
 
   <section>
-    <h2>Smart Solar Technology</h2>
-    <div class="highlight-section">
-      <ul>
-        <li><img src="https://img.icons8.com/fluency/28/solar-panel.png" loading="lazy" decoding="async" /> <strong>Real-time Monitoring:</strong> Access system performance anytime, anywhere from your phone or PC.</li>
-        <li><img src="https://img.icons8.com/fluency/28/battery.png" loading="lazy" decoding="async" /> <strong>Battery Management System:</strong> Automatically switches between solar, battery, and grid.</li>
-        <li><img src="https://img.icons8.com/fluency/28/computer-support.png" loading="lazy" decoding="async" /> <strong>Remote Diagnostics:</strong> Our team checks and troubleshoots your system remotely.</li>
-        <li><img src="https://img.icons8.com/fluency/28/idea.png" loading="lazy" decoding="async" /> <strong>Efficiency Alerts:</strong> Get notified of unusual performance or shading problems instantly.</li>
-      </ul>
-    </div>
+    <h2>About Us</h2>
+    <p>At <strong>Solaré Installations</strong>, we believe every family deserves energy independence, affordability, and peace of mind.
+    We’re a new-age solar startup based in Islamabad, offering clean, affordable energy with unmatched transparency and service.</p>
   </section>
 
   <section>
-    <h2>Warranties & Financing</h2>
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>On-Grid Systems:</strong> For homes looking to reduce electricity bills.</li>
+      <li><strong>Hybrid Systems:</strong> Battery backup + grid connectivity.</li>
+      <li><strong>Net Metering:</strong> Full support with IESCO documentation.</li>
+      <li><strong>Custom Installations:</strong> Inspection, sizing & execution.</li>
+      <li><strong>Post-Install Support:</strong> Ongoing system checkups and help.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Packages (Estimated)</h2>
+    <ul>
+      <li><strong>3kW On-Grid:</strong> ₨460,000–₨500,000</li>
+      <li><strong>5kW Hybrid:</strong> ₨790,000–₨860,000</li>
+      <li><strong>10kW Net Metering Pro:</strong> ₨1,380,000–₨1,520,000</li>
+    </ul>
+    <p><em>Final cost depends on structure, panels, and inverter choice.</em></p>
+  </div>
+  </section>
+
+  <section>
+    <h2>Client Feedback</h2>
+    <p>“The Solaré team was very professional. They helped us size our system right, explained everything, and followed up even after install.”<br> <em>-- Ayesha I., G-13</em></p>
+  </div>
+    <p>“We were confused about net metering. They made it simple, affordable, and fast. Highly recommended.”<br> <em>-- Bilal R., Satellite Town</em></p>
+  </div>
+  </section>
+
+  <section>
+    <h2>Why Choose Solaré?</h2>
     <div class="highlight-section">
       <ul>
-        <li><img src="https://img.icons8.com/fluency/28/warranty.png" loading="lazy" decoding="async" /> <strong>Panel Warranty:</strong> Up to 25 years product + performance warranty (tier-1 panels only).</li>
-        <li><img src="https://img.icons8.com/fluency/28/inverter.png" loading="lazy" decoding="async" /> <strong>Inverter Warranty:</strong> 5–10 years (Solis, Huawei, Inverex).</li>
-        <li><img src="https://img.icons8.com/fluency/28/maintenance.png" loading="lazy" decoding="async" /> <strong>Workmanship Guarantee:</strong> 3 years, covering all mechanical and electrical installation.</li>
-        <li><img src="https://img.icons8.com/fluency/28/money.png" loading="lazy" decoding="async" /> <strong>Financing Options:</strong> Available via Meezan Bank, JS, Faysal with markup subsidy for select cases.</li>
+        <li><img src="https://lucide.dev/icons/users.svg" width="20" alt="Engineer" style="vertical-align:middle;margin-right:8px;" /><strong>Engineer-led Installations:</strong> Precision and quality from trained professionals.</li>
+        <li><img src="https://lucide.dev/icons/shield-check.svg" width="20" alt="Tier-1" style="vertical-align:middle;margin-right:8px;" /><strong>Premium Tier-1 Equipment:</strong> Trusted global brands with 25-year warranties.</li>
+        <li><img src="https://lucide.dev/icons/scale.svg" width="20" alt="Transparency" style="vertical-align:middle;margin-right:8px;" /><strong>100% Transparency:</strong> No hidden charges, full pricing breakdown, clear communication.</li>
+        <li><img src="https://lucide.dev/icons/handshake.svg" width="20" alt="Ethics" style="vertical-align:middle;margin-right:8px;" /><strong>Islamic Business Values:</strong> Ethics, trust, and accountability at our core.</li>
+        <li><img src="https://lucide.dev/icons/user-check.svg" width="20" alt="Co-founder" style="vertical-align:middle;margin-right:8px;" /><strong>Co-founder Involvement:</strong> Direct communication with decision-makers, not sales reps.</li>
       </ul>
     </div>
   </section>
 
-  <section class="form-container">
+  
+<section id="gallery">
+  <h2>Recent Installations</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+    <img src="https://images.unsplash.com/photo-1584270354949-1f7b33c27d91?auto=format&fit=crop&w=800&q=80" alt="Solar Panel Rooftop 1" style="width:300px;border-radius:10px;" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1605711406295-c05553b547cc?auto=format&fit=crop&w=800&q=80" alt="Solar Installer Working" style="width:300px;border-radius:10px;" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1509396174374-3e24c3d7e028?auto=format&fit=crop&w=800&q=80" alt="Inverter Installed Indoors" style="width:300px;border-radius:10px;" loading="lazy" />
+  </div>
+</section>
+
+<section class="form-container">
     <h2>Get in Touch</h2>
     <form action="https://formspree.io/f/xdkzbbre" method="POST">
       <div class="form-group">
@@ -208,5 +239,9 @@
       <button type="submit">Send Inquiry</button>
     </form>
   </section>
+<footer style="background:#174c3c;color:white;padding:30px;text-align:center;">
+  <p>&copy; 2025 Solaré Installations. All rights reserved.</p>
+  <p>Email: <a href="mailto:solare.installations@gmail.com" style="color:#fdcb00;">solare.installations@gmail.com</a></p>
+</footer>
 </body>
 </html>
