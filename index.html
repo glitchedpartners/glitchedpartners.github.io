@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +9,6 @@
   <meta name="keywords" content="solar panels Islamabad, hybrid solar system Pakistan, net metering IESCO, solaré installations, solar Rawalpindi, solar system price, on-grid solar">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Solaré Installations">
-
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="Solaré Installations - Premium Solar Experts in Islamabad" />
-  <meta property="og:description" content="Solar energy done right — engineered solar systems with full net metering and transparent pricing. Book your free survey now." />
-  <meta property="og:image" content="https://yourdomain.com/assets/og-banner.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Solaré" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Solaré Installations" />
-  <meta name="twitter:description" content="Engineer-led solar panel installations in Islamabad & Rawalpindi. Get your quote today." />
-  <meta name="twitter:image" content="https://yourdomain.com/assets/og-banner.jpg" />
-
   <style>
     :root {
       --primary: #fdcb00;
@@ -31,31 +17,30 @@
       --text: #1b1b1b;
       --background: #fdfdfd;
     }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       background-color: var(--background);
       color: var(--text);
+      scroll-behavior: smooth;
     }
-
     header {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(23, 76, 60, 0.9)), url('https://images.unsplash.com/photo-1606060027601-e3fdf7f1fc57?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 80px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s ease-out forwards;
     }
-
     header h1 {
       font-size: 2.8em;
       margin-bottom: 10px;
     }
-
     header p {
       font-size: 1.2em;
     }
-
     button {
       background-color: var(--primary);
       color: #000;
@@ -65,40 +50,34 @@
       font-size: 1em;
       cursor: pointer;
       border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
-
+    button:hover {
+      background-color: #e6b800;
+    }
     section {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.3s;
     }
-
     section h2 {
       color: var(--secondary);
       border-left: 6px solid var(--primary);
       padding-left: 12px;
       margin-bottom: 20px;
     }
-
     .highlight-section {
       background-color: var(--tertiary);
       padding: 30px;
       border-radius: 10px;
     }
-
-    .packages ul,
-    .testimonials p,
-    .faq ul,
-    .services ul {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
     ul li {
       margin-bottom: 12px;
     }
-
     .contact a {
       display: inline-block;
       background-color: var(--secondary);
@@ -107,7 +86,6 @@
       border-radius: 6px;
       text-decoration: none;
     }
-
     .form-container {
       background: #fff;
       padding: 30px;
@@ -115,22 +93,19 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       max-width: 700px;
       margin: 40px auto;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.6s;
     }
-
-    .form-container h2 {
-      margin-bottom: 20px;
-    }
-
     .form-group {
       margin-bottom: 15px;
     }
-
     .form-group label {
       display: block;
       font-weight: bold;
       margin-bottom: 6px;
     }
-
     .form-group input,
     .form-group textarea {
       width: 100%;
@@ -138,12 +113,10 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-
     .form-group textarea {
       resize: vertical;
       min-height: 100px;
     }
-
     .form-container button {
       background-color: var(--primary);
       color: black;
@@ -152,11 +125,29 @@
       border-radius: 6px;
       cursor: pointer;
       font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .form-container button:hover {
+      background-color: #e6b800;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    img[loading="lazy"] {
+      max-height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Switch to Solar. Save Big. Go Solaré.</h1>
     <p>Reliable, customized solar installations for homes & businesses in Islamabad and Rawalpindi.</p>
@@ -164,53 +155,27 @@
   </header>
 
   <section>
-    <h2>About Us</h2>
-    <p><strong>Solaré Installations</strong> is led by engineers with a passion for delivering reliable, affordable, and ethical solar energy solutions. We bring professional expertise, on-ground experience, and full post-installation support for homes and businesses in Islamabad and Rawalpindi.</p>
+    <h2>Smart Solar Technology</h2>
+    <div class="highlight-section">
+      <ul>
+        <li><img src="https://img.icons8.com/fluency/28/solar-panel.png" loading="lazy" decoding="async" /> <strong>Real-time Monitoring:</strong> Access system performance anytime, anywhere from your phone or PC.</li>
+        <li><img src="https://img.icons8.com/fluency/28/battery.png" loading="lazy" decoding="async" /> <strong>Battery Management System:</strong> Automatically switches between solar, battery, and grid.</li>
+        <li><img src="https://img.icons8.com/fluency/28/computer-support.png" loading="lazy" decoding="async" /> <strong>Remote Diagnostics:</strong> Our team checks and troubleshoots your system remotely.</li>
+        <li><img src="https://img.icons8.com/fluency/28/idea.png" loading="lazy" decoding="async" /> <strong>Efficiency Alerts:</strong> Get notified of unusual performance or shading problems instantly.</li>
+      </ul>
+    </div>
   </section>
 
   <section>
-    <h2>Our Services</h2>
-    <ul>
-      <li><strong>On-Grid Systems:</strong> For homes looking to reduce electricity bills.</li>
-      <li><strong>Hybrid Systems:</strong> Battery backup + grid connectivity.</li>
-      <li><strong>Net Metering:</strong> Full support with IESCO documentation.</li>
-      <li><strong>Custom Installations:</strong> Inspection, sizing & execution.</li>
-      <li><strong>Post-Install Support:</strong> Ongoing system checkups and help.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Why Choose Solaré?</h2>
-    <ul>
-      <li><strong>Engineer-led execution</strong> – Technical accuracy from sizing to wiring.</li>
-      <li><strong>Local presence</strong> – Full service across Islamabad & Rawalpindi.</li>
-      <li><strong>Transparent pricing</strong> – No upsells or hidden charges.</li>
-      <li><strong>Accountability</strong> – Co-founders stay involved with every project.</li>
-      <li><strong>Post-install support</strong> – We’re with you beyond installation.</li>
-    </ul>
-  </section>
-
-  <section class="packages">
-    <h2>Packages (Estimated)</h2>
-    <ul>
-      <li><strong>3kW On-Grid:</strong> ₨460,000–₨500,000</li>
-      <li><strong>5kW Hybrid:</strong> ₨790,000–₨860,000</li>
-      <li><strong>10kW Net Metering Pro:</strong> ₨1,380,000–₨1,520,000</li>
-    </ul>
-    <p><em>Final cost depends on structure, panels, and inverter choice.</em></p>
-  </section>
-
-  <section class="testimonials">
-    <h2>Client Feedback</h2>
-    <p>“The Solaré team was very professional. They helped us size our system right, explained everything, and followed up even after install.”<br> <em>-- Ayesha I., G-13</em></p>
-    <p>“We were confused about net metering. They made it simple, affordable, and fast. Highly recommended.”<br> <em>-- Bilal R., Satellite Town</em></p>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Ready to go solar? Let’s talk.</p>
-    <a href="https://wa.me/923390015006">Book via WhatsApp</a>
-    <p>Email: <a href="mailto:solare.installations@gmail.com">solare.installations@gmail.com</a></p>
+    <h2>Warranties & Financing</h2>
+    <div class="highlight-section">
+      <ul>
+        <li><img src="https://img.icons8.com/fluency/28/warranty.png" loading="lazy" decoding="async" /> <strong>Panel Warranty:</strong> Up to 25 years product + performance warranty (tier-1 panels only).</li>
+        <li><img src="https://img.icons8.com/fluency/28/inverter.png" loading="lazy" decoding="async" /> <strong>Inverter Warranty:</strong> 5–10 years (Solis, Huawei, Inverex).</li>
+        <li><img src="https://img.icons8.com/fluency/28/maintenance.png" loading="lazy" decoding="async" /> <strong>Workmanship Guarantee:</strong> 3 years, covering all mechanical and electrical installation.</li>
+        <li><img src="https://img.icons8.com/fluency/28/money.png" loading="lazy" decoding="async" /> <strong>Financing Options:</strong> Available via Meezan Bank, JS, Faysal with markup subsidy for select cases.</li>
+      </ul>
+    </div>
   </section>
 
   <section class="form-container">
@@ -243,6 +208,5 @@
       <button type="submit">Send Inquiry</button>
     </form>
   </section>
-
 </body>
-        </html>
+</html>
