@@ -7,6 +7,7 @@
   <meta name="description" content="Solaré Installations: Islamabad’s trusted solar partner. Clean, affordable energy with transparency, service, and a professional gallery of our work.">
   <meta name="keywords" content="Solar, Islamabad, Solaré, Installations, Renewable Energy, Net Metering, Solar Gallery">
   <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     :root {
       --primary: #fdcb00;
@@ -79,9 +80,16 @@
       transition: background 0.2s;
       text-decoration: none;
       display: inline-block;
+      margin: 0.5em 0;
+    }
+    .cta-btn i {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+      vertical-align: middle;
     }
     .cta-btn:hover {
       background: #0e2e22;
+      color: #fff;
     }
     section {
       max-width: 900px;
@@ -139,10 +147,11 @@
       font-style: normal;
     }
     .contact-form {
-      max-width: 400px;
+      max-width: 320px;
+      width: 100%;
       margin: 0 auto;
+      padding: 1em;
       background: var(--accent);
-      padding: 1.5em;
       border-radius: 12px;
       box-shadow: 0 1px 6px rgba(23,76,60,0.06);
     }
@@ -178,12 +187,6 @@
       background: var(--secondary);
       color: #fff;
     }
-    .phone-link {
-      color: var(--primary);
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.1em;
-    }
     footer {
       background: var(--secondary);
       color: #fff;
@@ -208,15 +211,14 @@
     }
     @media (max-width: 500px) {
       .contact-form {
-        padding: 0.7em;
+        padding: 0.5em;
+        max-width: 98vw;
       }
       nav {
         gap: 1em;
       }
     }
   </style>
-  <!-- For icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <header>
@@ -231,11 +233,13 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <div class="hero">
     <h1>Clean, Affordable Solar for Islamabad</h1>
-    <p>We believe every family deserves energy independence, affordability, and peace of mind.<br>
-    <strong>03390015006</strong> &mdash; <a class="phone-link" href="tel:03390015006">Call Us</a> or <a class="cta-btn" href="https://wa.me/923390015006" target="_blank">WhatsApp</a></p>
-    <p>We’re a new-age solar startup based in Islamabad, offering clean, affordable energy with unmatched transparency and service.</p>
+    <p>We believe every family deserves energy independence, affordability, and peace of mind.</p>
+    <a class="cta-btn" href="https://wa.me/923390015006" target="_blank">
+      <i class="fab fa-whatsapp"></i> Contact Us on WhatsApp
+    </a>
     <p style="font-size:0.95em; color:#555;"><em>*Final cost depends on structure, panels, and inverter choice.</em></p>
   </div>
 
@@ -363,6 +367,7 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form class="contact-form" action="https://formspree.io/f/xdkzbbre" method="POST">
@@ -373,7 +378,7 @@
       <input type="email" id="email" name="email" required>
 
       <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}" placeholder="03390015006">
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}" placeholder="Your phone number">
 
       <label for="bill">Average Monthly Bill (PKR)</label>
       <input type="number" id="bill" name="bill" required min="0" placeholder="e.g. 12000">
@@ -383,15 +388,15 @@
 
       <button type="submit">Send</button>
     </form>
-    <p style="text-align:center; margin-top:1em;">
-      Or call us at <a class="phone-link" href="tel:03390015006">03390015006</a>
-    </p>
+    <div style="text-align:center; margin-top:1em;">
+      <a class="cta-btn" href="https://wa.me/923390015006" target="_blank">
+        <i class="fab fa-whatsapp"></i> Contact Us on WhatsApp
+      </a>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Solaré Installations &mdash; Islamabad, Pakistan<br>
-    <a class="phone-link" href="tel:03390015006">03390015006</a>
+    &copy; 2025 Solaré Installations &mdash; Islamabad, Pakistan
   </footer>
 </body>
-      </html>
-                                  
+</html>
