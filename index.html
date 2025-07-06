@@ -1,247 +1,397 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solaré Installations | Solar Panels, Hybrid Systems & Net Metering in Islamabad</title>
-  <meta name="description" content="Premium solar panel installation in Islamabad & Rawalpindi. Net metering, hybrid systems, and post-installation support by engineer-led Solaré.">
-  <meta name="keywords" content="solar panels Islamabad, hybrid solar system Pakistan, net metering IESCO, solaré installations, solar Rawalpindi, solar system price, on-grid solar">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Solaré Installations">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solaré Installations – Clean, Affordable Solar in Islamabad</title>
+  <meta name="description" content="Solaré Installations: Islamabad’s trusted solar partner. Clean, affordable energy with transparency, service, and a professional gallery of our work.">
+  <meta name="keywords" content="Solar, Islamabad, Solaré, Installations, Renewable Energy, Net Metering, Solar Gallery">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #fdcb00;
       --secondary: #174c3c;
-      --tertiary: #e0e0e0;
-      --text: #1b1b1b;
-      --background: #fdfdfd;
+      --background: #f7f7f7;
+      --text: #222;
+      --accent: #fffbe6;
     }
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
-      font-size: 1.05em;
-      background-color: var(--background);
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--background);
       color: var(--text);
-      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
     }
     header {
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(23, 76, 60, 0.9)), url('https://images.unsplash.com/photo-1606060027601-e3fdf7f1fc57?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      color: white;
+      background: linear-gradient(90deg, var(--secondary) 60%, var(--primary) 100%);
+      color: #fff;
+      padding: 1.5em 0 1em 0;
       text-align: center;
-      padding: 100px 20px;
-      animation: fadeInUp 1.2s ease-out forwards;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 1em;
+      flex-wrap: wrap;
     }
-    header p {
-      font-size: 1.3em;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      transition: background 0.2s;
     }
-    button {
-      background-color: var(--primary);
-      color: #000;
+    nav a:hover {
+      background: var(--primary);
+      color: var(--secondary);
+    }
+    .hero {
+      background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 100%);
+      padding: 3em 1em 2em 1em;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      margin-bottom: 2em;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: var(--secondary);
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .cta-btn {
+      background: var(--secondary);
+      color: #fff;
+      padding: 0.9em 2em;
       border: none;
-      padding: 14px 28px;
-      margin-top: 20px;
-      font-size: 1em;
+      border-radius: 25px;
+      font-size: 1.1em;
+      font-weight: 600;
       cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
     }
-    button:hover {
-      background-color: #e6b800;
+    .cta-btn:hover {
+      background: #0e2e22;
     }
     section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.2s;
-    }
-    section h2 {
-      color: var(--secondary);
-      border-left: 6px solid var(--primary);
-      padding-left: 12px;
-      margin-bottom: 20px;
-      font-size: 1.8em;
-    }
-    .highlight-section {
-      background-color: var(--tertiary);
-      padding: 30px;
-      border-radius: 10px;
-    }
-    ul li {
-      margin-bottom: 14px;
-    }
-    .form-container {
+      max-width: 900px;
+      margin: 2em auto;
       background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      max-width: 700px;
-      margin: 60px auto;
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.4s;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(23,76,60,0.07);
+      padding: 2em 1.5em;
     }
-    .form-group {
-      margin-bottom: 15px;
+    h2 {
+      color: var(--secondary);
+      margin-top: 0;
     }
-    .form-group label {
+    .services, .why-us, .packages, .testimonials, .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: space-between;
+    }
+    .service, .why, .package, .testimonial, .gallery-img {
+      flex: 1 1 250px;
+      min-width: 220px;
+      margin-bottom: 1em;
+    }
+    .why i, .service i {
+      font-size: 2em;
+      color: var(--primary);
+      margin-bottom: 0.5em;
       display: block;
-      font-weight: bold;
-      margin-bottom: 6px;
     }
-    .form-group input,
-    .form-group textarea {
+    .gallery-img img {
       width: 100%;
-      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(23,76,60,0.08);
+      margin-bottom: 0.5em;
+      object-fit: cover;
+      height: 160px;
+    }
+    .testimonials {
+      flex-direction: column;
+      gap: 1.5em;
+    }
+    .testimonial {
+      background: var(--accent);
+      border-left: 4px solid var(--primary);
+      padding: 1em 1.5em;
+      border-radius: 8px;
+      font-style: italic;
+    }
+    .testimonial span {
+      display: block;
+      margin-top: 0.5em;
+      font-weight: 600;
+      color: var(--secondary);
+      font-style: normal;
+    }
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: var(--accent);
+      padding: 1.5em;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(23,76,60,0.06);
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin-bottom: 1em;
       border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .form-group textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-    .form-container button {
-      background-color: var(--primary);
-      color: black;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      border-radius: 4px;
       font-size: 1em;
-      transition: background-color 0.3s ease;
+      font-family: inherit;
     }
-    .form-container button:hover {
-      background-color: #e6b800;
+    .contact-form button {
+      width: 100%;
+      background: var(--primary);
+      color: var(--secondary);
+      border: none;
+      padding: 0.9em;
+      border-radius: 25px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
+    .contact-form button:hover {
+      background: var(--secondary);
+      color: #fff;
+    }
+    .phone-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    footer {
+      background: var(--secondary);
+      color: #fff;
+      text-align: center;
+      padding: 1.2em 0 0.7em 0;
+      margin-top: 2em;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      font-size: 1em;
+    }
+    @media (max-width: 700px) {
+      .services, .why-us, .packages, .gallery {
+        flex-direction: column;
+        gap: 1em;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      section {
+        padding: 1em 0.5em;
+      }
+      .hero h1 {
+        font-size: 2em;
+      }
+    }
+    @media (max-width: 500px) {
+      .contact-form {
+        padding: 0.7em;
+      }
+      nav {
+        gap: 1em;
       }
     }
   </style>
+  <!-- For icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-<nav style="position:sticky;top:0;background:#fff;padding:12px 20px;z-index:1000;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:space-between;">
-  <strong style="font-size:1.2em;color:#174c3c;">Solaré</strong>
-  <div>
-    <a href="#services" style="margin-left:20px;text-decoration:none;color:#174c3c;">Services</a>
-    <a href="#packages" style="margin-left:15px;text-decoration:none;color:#174c3c;">Packages</a>
-    <a href="#contact" style="margin-left:15px;text-decoration:none;color:#174c3c;">Contact</a>
-  </div>
-</nav>
   <header>
-    <h1>Switch to Solar. Save Big. Go Solaré.</h1>
-    <p>Reliable, customized solar installations for homes & businesses in Islamabad and Rawalpindi.</p>
-    <a href="https://wa.me/923390015006"><button>Book a Free Site Survey</button></a>
+    <div style="font-size:1.7em; font-weight:700; letter-spacing:1px;">Solaré Installations</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#whyus">Why Choose Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>At <strong>Solaré Installations</strong>, we believe every family deserves energy independence, affordability, and peace of mind.
-    We’re a new-age solar startup based in Islamabad, offering clean, affordable energy with unmatched transparency and service.</p>
-  </section>
+  <div class="hero">
+    <h1>Clean, Affordable Solar for Islamabad</h1>
+    <p>We believe every family deserves energy independence, affordability, and peace of mind.<br>
+    <strong>03390015006</strong> &mdash; <a class="phone-link" href="tel:03390015006">Call Us</a> or <a class="cta-btn" href="https://wa.me/923390015006" target="_blank">WhatsApp</a></p>
+    <p>We’re a new-age solar startup based in Islamabad, offering clean, affordable energy with unmatched transparency and service.</p>
+    <p style="font-size:0.95em; color:#555;"><em>*Final cost depends on structure, panels, and inverter choice.</em></p>
+  </div>
 
-  <section>
+  <section id="services">
     <h2>Our Services</h2>
-    <ul>
-      <li><strong>On-Grid Systems:</strong> For homes looking to reduce electricity bills.</li>
-      <li><strong>Hybrid Systems:</strong> Battery backup + grid connectivity.</li>
-      <li><strong>Net Metering:</strong> Full support with IESCO documentation.</li>
-      <li><strong>Custom Installations:</strong> Inspection, sizing & execution.</li>
-      <li><strong>Post-Install Support:</strong> Ongoing system checkups and help.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Packages (Estimated)</h2>
-    <ul>
-      <li><strong>3kW On-Grid:</strong> ₨460,000–₨500,000</li>
-      <li><strong>5kW Hybrid:</strong> ₨790,000–₨860,000</li>
-      <li><strong>10kW Net Metering Pro:</strong> ₨1,380,000–₨1,520,000</li>
-    </ul>
-    <p><em>Final cost depends on structure, panels, and inverter choice.</em></p>
-  </div>
-  </section>
-
-  <section>
-    <h2>Client Feedback</h2>
-    <p>“The Solaré team was very professional. They helped us size our system right, explained everything, and followed up even after install.”<br> <em>-- Ayesha I., G-13</em></p>
-  </div>
-    <p>“We were confused about net metering. They made it simple, affordable, and fast. Highly recommended.”<br> <em>-- Bilal R., Satellite Town</em></p>
-  </div>
-  </section>
-
-  <section>
-    <h2>Why Choose Solaré?</h2>
-    <div class="highlight-section">
-      <ul>
-        <li><img src="https://lucide.dev/icons/users.svg" width="20" alt="Engineer" style="vertical-align:middle;margin-right:8px;" /><strong>Engineer-led Installations:</strong> Precision and quality from trained professionals.</li>
-        <li><img src="https://lucide.dev/icons/shield-check.svg" width="20" alt="Tier-1" style="vertical-align:middle;margin-right:8px;" /><strong>Premium Tier-1 Equipment:</strong> Trusted global brands with 25-year warranties.</li>
-        <li><img src="https://lucide.dev/icons/scale.svg" width="20" alt="Transparency" style="vertical-align:middle;margin-right:8px;" /><strong>100% Transparency:</strong> No hidden charges, full pricing breakdown, clear communication.</li>
-        <li><img src="https://lucide.dev/icons/handshake.svg" width="20" alt="Ethics" style="vertical-align:middle;margin-right:8px;" /><strong>Islamic Business Values:</strong> Ethics, trust, and accountability at our core.</li>
-        <li><img src="https://lucide.dev/icons/user-check.svg" width="20" alt="Co-founder" style="vertical-align:middle;margin-right:8px;" /><strong>Co-founder Involvement:</strong> Direct communication with decision-makers, not sales reps.</li>
-      </ul>
+    <div class="services">
+      <div class="service">
+        <i class="fas fa-solar-panel"></i>
+        <strong>Residential Solar</strong>
+        <p>Custom rooftop solar solutions for homes, with net metering and full installation.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-building"></i>
+        <strong>Commercial Solar</strong>
+        <p>Solar for offices, shops, and businesses. Reduce your bills and carbon footprint.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-bolt"></i>
+        <strong>Hybrid & Off-Grid</strong>
+        <p>Battery backup and hybrid systems for uninterrupted power and energy security.</p>
+      </div>
     </div>
   </section>
 
-  
-<section id="gallery">
-  <h2>Recent Installations</h2>
-  <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
-    <img src="https://images.unsplash.com/photo-1584270354949-1f7b33c27d91?auto=format&fit=crop&w=800&q=80" alt="Solar Panel Rooftop 1" style="width:300px;border-radius:10px;" loading="lazy" />
-    <img src="https://images.unsplash.com/photo-1605711406295-c05553b547cc?auto=format&fit=crop&w=800&q=80" alt="Solar Installer Working" style="width:300px;border-radius:10px;" loading="lazy" />
-    <img src="https://images.unsplash.com/photo-1509396174374-3e24c3d7e028?auto=format&fit=crop&w=800&q=80" alt="Inverter Installed Indoors" style="width:300px;border-radius:10px;" loading="lazy" />
-  </div>
-</section>
-
-<section class="form-container">
-    <h2>Get in Touch</h2>
-    <form action="https://formspree.io/f/xdkzbbre" method="POST">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required />
+  <section id="packages">
+    <h2>Packages</h2>
+    <div class="packages">
+      <div class="package">
+        <strong>5kW System</strong>
+        <ul>
+          <li>Net Metering</li>
+          <li>Tier-1 Panels</li>
+          <li>Hybrid Inverter</li>
+        </ul>
+        <p><b>From PKR 850,000*</b></p>
       </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required />
+      <div class="package">
+        <strong>10kW System</strong>
+        <ul>
+          <li>Net Metering</li>
+          <li>Tier-1 Panels</li>
+          <li>Hybrid Inverter</li>
+        </ul>
+        <p><b>From PKR 1,600,000*</b></p>
       </div>
-      <div class="form-group">
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" required />
+      <div class="package">
+        <strong>15kW System</strong>
+        <ul>
+          <li>Net Metering</li>
+          <li>Tier-1 Panels</li>
+          <li>Hybrid Inverter</li>
+        </ul>
+        <p><b>From PKR 2,350,000*</b></p>
       </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="bill">Average Monthly Electricity Bill (₨)</label>
-        <input type="number" id="bill" name="bill" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Additional Message</label>
-        <textarea id="message" name="message"></textarea>
-      </div>
-      <button type="submit">Send Inquiry</button>
-    </form>
+    </div>
+    <p style="font-size:0.95em; color:#555;"><em>*Final price depends on site, structure, and inverter selection.</em></p>
   </section>
-<footer style="background:#174c3c;color:white;padding:30px;text-align:center;">
-  <p>&copy; 2025 Solaré Installations. All rights reserved.</p>
-  <p>Email: <a href="mailto:solare.installations@gmail.com" style="color:#fdcb00;">solare.installations@gmail.com</a></p>
-</footer>
+
+  <section id="whyus">
+    <h2>Why Choose Us?</h2>
+    <div class="why-us">
+      <div class="why">
+        <i class="fas fa-certificate"></i>
+        <strong>Certified Installers</strong>
+        <p>Trained, experienced, and certified solar professionals.</p>
+      </div>
+      <div class="why">
+        <i class="fas fa-hand-holding-heart"></i>
+        <strong>Transparent Pricing</strong>
+        <p>No hidden charges. Upfront, honest quotes every time.</p>
+      </div>
+      <div class="why">
+        <i class="fas fa-clock"></i>
+        <strong>Fast Turnaround</strong>
+        <p>Quick site surveys and installations, with minimal disruption.</p>
+      </div>
+      <div class="why">
+        <i class="fas fa-users"></i>
+        <strong>After-Sales Support</strong>
+        <p>We’re here for you, even after installation is complete.</p>
+      </div>
+      <div class="why">
+        <i class="fas fa-leaf"></i>
+        <strong>Eco-Friendly</strong>
+        <p>Committed to a greener, cleaner Islamabad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-img">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Solar installation on home rooftop" loading="lazy">
+      </div>
+      <div class="gallery-img">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Commercial solar panels" loading="lazy">
+      </div>
+      <div class="gallery-img">
+        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80" alt="Solaré team at work" loading="lazy">
+      </div>
+      <div class="gallery-img">
+        <img src="https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?auto=format&fit=crop&w=400&q=80" alt="Hybrid solar system" loading="lazy">
+      </div>
+      <div class="gallery-img">
+        <img src="https://images.unsplash.com/photo-1457301547464-91995555cd23?auto=format&fit=crop&w=400&q=80" alt="Solar panels on roof" loading="lazy">
+      </div>
+      <div class="gallery-img">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Technician installing solar panels" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        “The Solaré team was very professional. They helped us size our system right, explained everything, and followed up even after install.”
+        <span>-- Ayesha I., G-13</span>
+      </div>
+      <div class="testimonial">
+        “We were confused about net metering. They made it simple, affordable, and fast. Highly recommended.”
+        <span>-- Bilal R., Satellite Town</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="https://formspree.io/f/xdkzbbre" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}" placeholder="03390015006">
+
+      <label for="bill">Average Monthly Bill (PKR)</label>
+      <input type="number" id="bill" name="bill" required min="0" placeholder="e.g. 12000">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="3" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p style="text-align:center; margin-top:1em;">
+      Or call us at <a class="phone-link" href="tel:03390015006">03390015006</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Solaré Installations &mdash; Islamabad, Pakistan<br>
+    <a class="phone-link" href="tel:03390015006">03390015006</a>
+  </footer>
 </body>
-</html>
+      </html>
+                                  
