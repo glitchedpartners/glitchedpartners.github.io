@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Solaré Installations – Clean, Affordable Solar in Islamabad</title>
-  <meta name="description" content="Solaré Installations: Islamabad’s trusted solar partner. Clean, affordable energy with transparency, service, and a professional gallery of our work.">
-  <meta name="keywords" content="Solar, Islamabad, Solaré, Installations, Renewable Energy, Net Metering, Solar Gallery">
+  <title>SolaRé – Solar Energy Solutions</title>
+  <meta name="description" content="SolaRé: Islamabad’s trusted solar partner. Clean, affordable energy with transparency, service, and a professional gallery of our work.">
+  <meta name="keywords" content="Solar, Islamabad, SolaRé, Installations, Renewable Energy, Net Metering, Solar Gallery">
   <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
@@ -22,22 +22,81 @@
       color: var(--text);
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
     header {
       background: linear-gradient(90deg, var(--secondary) 60%, var(--primary) 100%);
       color: #fff;
-      padding: 1.5em 0 1em 0;
+      padding: 0 0 1em 0;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 12px rgba(23,76,60,0.07);
+      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) 0.1s both;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.2em;
+      margin-bottom: 0.5em;
+      animation: logoPop 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+    }
+    @keyframes logoPop {
+      0% { opacity: 0; transform: scale(0.7);}
+      80% { opacity: 1; transform: scale(1.1);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    .logo-img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(23,76,60,0.10);
+      margin-bottom: 0.5em;
+      border: 3px solid var(--primary);
+      animation: logoSpin 2.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+    }
+    @keyframes logoSpin {
+      0% { transform: rotate(-180deg) scale(0.7);}
+      80% { transform: rotate(10deg) scale(1.1);}
+      100% { transform: rotate(0deg) scale(1);}
+    }
+    .brand-title {
+      font-size: 2.2em;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--primary);
+      text-shadow: 0 2px 8px rgba(23,76,60,0.08);
+      margin-bottom: 0.1em;
+      font-family: 'Inter', Arial, sans-serif;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.5s both;
+    }
+    .brand-subtitle {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-bottom: 0.5em;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.7s both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1;}
     }
     nav {
       display: flex;
       justify-content: center;
       gap: 2em;
-      margin-top: 1em;
+      margin-top: 0.5em;
       flex-wrap: wrap;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.8s both;
     }
     nav a {
       color: #fff;
@@ -45,11 +104,25 @@
       font-weight: 600;
       padding: 0.5em 1em;
       border-radius: 4px;
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    nav a:after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0px;
+      background: var(--primary);
+      transition: width .3s;
+    }
+    nav a:hover:after {
+      width: 100%;
     }
     nav a:hover {
       background: var(--primary);
       color: var(--secondary);
+      box-shadow: 0 2px 8px rgba(253,203,0,0.10);
     }
     .hero {
       background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 100%);
@@ -58,15 +131,24 @@
       border-bottom-left-radius: 40px;
       border-bottom-right-radius: 40px;
       margin-bottom: 2em;
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.5s both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
     }
     .hero h1 {
       font-size: 2.5em;
       margin-bottom: 0.5em;
       color: var(--secondary);
+      font-weight: 700;
+      letter-spacing: 1px;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 1s both;
     }
     .hero p {
       font-size: 1.2em;
       margin-bottom: 1.5em;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 1.2s both;
     }
     .cta-btn {
       background: var(--secondary);
@@ -77,10 +159,12 @@
       font-size: 1.1em;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.2s, box-shadow 0.2s;
       text-decoration: none;
       display: inline-block;
       margin: 0.5em 0;
+      box-shadow: 0 2px 8px rgba(23,76,60,0.10);
+      animation: pulse 2s infinite;
     }
     .cta-btn i {
       margin-right: 0.5em;
@@ -90,6 +174,13 @@
     .cta-btn:hover {
       background: #0e2e22;
       color: #fff;
+      box-shadow: 0 4px 16px rgba(23,76,60,0.18);
+      animation: none;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(253,203,0,0.3);}
+      70% { box-shadow: 0 0 0 10px rgba(253,203,0,0);}
+      100% { box-shadow: 0 0 0 0 rgba(253,203,0,0);}
     }
     section {
       max-width: 900px;
@@ -98,10 +189,13 @@
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(23,76,60,0.07);
       padding: 2em 1.5em;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 1.2s both;
     }
     h2 {
       color: var(--secondary);
       margin-top: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
     .services, .why-us, .packages, .testimonials, .gallery {
       display: flex;
@@ -113,12 +207,18 @@
       flex: 1 1 250px;
       min-width: 220px;
       margin-bottom: 1em;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service:hover, .why:hover, .package:hover, .gallery-img:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 4px 16px rgba(253,203,0,0.10);
     }
     .why i, .service i {
       font-size: 2em;
       color: var(--primary);
       margin-bottom: 0.5em;
       display: block;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 1.4s both;
     }
     .gallery-img img {
       width: 100%;
@@ -127,6 +227,11 @@
       margin-bottom: 0.5em;
       object-fit: cover;
       height: 160px;
+      transition: transform 0.3s;
+    }
+    .gallery-img img:hover {
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 4px 16px rgba(253,203,0,0.13);
     }
     .testimonials {
       flex-direction: column;
@@ -138,6 +243,10 @@
       padding: 1em 1.5em;
       border-radius: 8px;
       font-style: italic;
+      transition: box-shadow 0.2s;
+    }
+    .testimonial:hover {
+      box-shadow: 0 4px 16px rgba(253,203,0,0.10);
     }
     .testimonial span {
       display: block;
@@ -154,6 +263,7 @@
       background: var(--accent);
       border-radius: 12px;
       box-shadow: 0 1px 6px rgba(23,76,60,0.06);
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 1.5s both;
     }
     .contact-form label {
       display: block;
@@ -170,6 +280,13 @@
       border-radius: 4px;
       font-size: 1em;
       font-family: inherit;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 1.5px solid var(--primary);
+      box-shadow: 0 2px 8px rgba(253,203,0,0.10);
+      outline: none;
     }
     .contact-form button {
       width: 100%;
@@ -196,6 +313,7 @@
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
       font-size: 1em;
+      animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 2s both;
     }
     @media (max-width: 700px) {
       .services, .why-us, .packages, .gallery {
@@ -217,12 +335,20 @@
       nav {
         gap: 1em;
       }
+      .logo-img {
+        width: 80px;
+        height: 80px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="font-size:1.7em; font-weight:700; letter-spacing:1px;">Solaré Installations</div>
+    <div class="logo-container">
+      <img src="1000038411.jpg" alt="SolaRé Logo" class="logo-img">
+      <div class="brand-title">SolaRé</div>
+      <div class="brand-subtitle">Solar Energy Solutions</div>
+    </div>
     <nav>
       <a href="#services">Services</a>
       <a href="#packages">Packages</a>
@@ -233,7 +359,6 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <div class="hero">
     <h1>Clean, Affordable Solar for Islamabad</h1>
     <p>We believe every family deserves energy independence, affordability, and peace of mind.</p>
@@ -357,7 +482,7 @@
     <h2>Testimonials</h2>
     <div class="testimonials">
       <div class="testimonial">
-        “The Solaré team was very professional. They helped us size our system right, explained everything, and followed up even after install.”
+        “The SolaRé team was very professional. They helped us size our system right, explained everything, and followed up even after install.”
         <span>-- Ayesha I., G-13</span>
       </div>
       <div class="testimonial">
@@ -367,7 +492,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form class="contact-form" action="https://formspree.io/f/xdkzbbre" method="POST">
@@ -396,8 +520,8 @@
   </section>
 
   <footer>
-    &copy; 2025 Solaré Installations &mdash; Islamabad, Pakistan
+    &copy; 2025 SolaRé – Solar Energy Solutions, Islamabad, Pakistan
   </footer>
 </body>
-    </html>
-    
+                                                                           </html>
+                                                                           
