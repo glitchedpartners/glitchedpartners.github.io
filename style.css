@@ -1,0 +1,328 @@
+/* =========================================================
+   SolaRé — Elite Style Sheet
+   Inspired by Lusion, Resn, Active Theory, and 2025's top web designers
+   Pairs seamlessly with animation.css for world-class motion
+   ========================================================= */
+
+/* ---------- 1. Root Design Tokens ---------- */
+:root {
+  /* Brand palette: vibrant, accessible, and modern */
+  --clr-primary: #fdcb00;
+  --clr-primary-glow: #ffe066;
+  --clr-secondary: #174c3c;
+  --clr-secondary-dark: #102d22;
+  --clr-accent: #fffbe6;
+  --clr-bg: #f7f7f7;
+  --clr-bg-dark: #181a1b;
+  --clr-text: #222;
+  --clr-text-light: #f7f7f7;
+  --clr-muted: #bdbdbd;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(120deg, #fdcb00 0%, #fffbe6 100%);
+  --gradient-btn: linear-gradient(90deg, #fdcb00 0%, #ffe066 100%);
+  --gradient-shadow: linear-gradient(90deg, rgba(253,203,0,0.14) 0%, rgba(23,76,60,0.08) 100%);
+
+  /* Typography scale (fluid, modular) */
+  --fs-900: clamp(2.8rem, 6vw + 1rem, 4rem);
+  --fs-800: clamp(2.2rem, 4vw + 1rem, 3.2rem);
+  --fs-700: clamp(1.7rem, 2vw + 1rem, 2.5rem);
+  --fs-600: 1.5rem;
+  --fs-500: 1.125rem;
+  --fs-400: 1rem;
+  --fs-300: 0.95rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 3rem;
+  --space-xl: 4rem;
+
+  /* Border radius */
+  --radius-lg: 18px;
+  --radius-md: 10px;
+  --radius-sm: 5px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(23,76,60,0.08);
+  --shadow-md: 0 8px 24px rgba(23,76,60,0.10);
+  --shadow-glow: 0 0 32px 0 var(--clr-primary-glow);
+
+  /* Transition/Easing */
+  --ease: cubic-bezier(.77,0,.18,1);
+  --transition: 0.35s var(--ease);
+}
+
+/* ---------- 2. Global Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--clr-bg); }
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.65;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- 3. Typography System ---------- */
+body, input, textarea, button {
+  font-size: var(--fs-400);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+h1, .brand-title { font-size: var(--fs-900); font-weight: 800; letter-spacing: 2px; }
+h2 { font-size: var(--fs-700); font-weight: 700; margin-bottom: var(--space-s); }
+h3, h4, h5, h6 { font-weight: 600; }
+.brand-subtitle { font-size: var(--fs-400); font-weight: 500; letter-spacing: 1px; color: var(--clr-text-light); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+a { color: var(--clr-primary); text-decoration: none; transition: color var(--transition); }
+a:hover, a:focus { color: var(--clr-secondary); }
+
+/* ---------- 4. Layout Utilities ---------- */
+.container { width: min(92%, 1200px); margin-inline: auto; }
+.radius-lg { border-radius: var(--radius-lg); }
+.radius-md { border-radius: var(--radius-md); }
+.radius-sm { border-radius: var(--radius-sm); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-glow { box-shadow: var(--shadow-glow); }
+
+/* ---------- 5. Header & Navigation ---------- */
+header {
+  position: sticky; top: 0; z-index: 999;
+  background: linear-gradient(90deg, var(--clr-secondary) 60%, var(--clr-primary) 100%);
+  color: #fff;
+  padding-block: var(--space-m) var(--space-xs);
+  box-shadow: var(--shadow-md);
+}
+.logo-container { display: flex; flex-direction: column; align-items: center; }
+.logo-img {
+  width: 110px; height: 110px; border: 3px solid var(--clr-primary);
+  border-radius: 50%; object-fit: contain; background: #fff;
+  box-shadow: 0 4px 24px rgba(23,76,60,0.12);
+}
+.brand-title { color: var(--clr-primary); margin-bottom: 0.15em; }
+.brand-subtitle { margin-bottom: 0.5em; }
+nav {
+  margin-top: .5rem;
+  display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
+  font-size: var(--fs-500);
+}
+nav a {
+  color: #fff; padding: .5em 1em; border-radius: var(--radius-sm); position: relative;
+  font-weight: 600; transition: color var(--transition), background var(--transition);
+}
+nav a::after {
+  content: ''; display: block; margin: auto; height: 2px; width: 0;
+  background: var(--clr-primary); transition: width .3s var(--ease);
+}
+nav a:hover, nav a:focus { color: var(--clr-secondary); background: var(--clr-primary);}
+nav a:hover::after, nav a:focus::after { width: 100%; }
+
+/* ---------- 6. Hero Section ---------- */
+.hero {
+  padding: var(--space-xl) 1rem var(--space-l) 1rem;
+  text-align: center;
+  background: var(--gradient-hero);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: var(--shadow-md);
+}
+.hero h1 { color: var(--clr-secondary); margin-bottom: .4em; }
+.hero p { font-size: var(--fs-500); max-width: 48ch; margin-inline: auto; }
+
+/* ---------- 7. Buttons & CTAs ---------- */
+.cta-btn, .contact-form button {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .9em 2em; border: none; border-radius: 25px;
+  background: var(--gradient-btn); color: var(--clr-secondary-dark);
+  font-size: var(--fs-500); font-weight: 700; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(253,203,0,0.16);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
+  position: relative; overflow: hidden;
+}
+.cta-btn i, .contact-form button i { font-size: 1.2em; vertical-align: middle; }
+.cta-btn:hover, .contact-form button:hover {
+  background: linear-gradient(90deg, #ffe066 0%, #fdcb00 100%);
+  color: #fff;
+  box-shadow: 0 0 40px 10px rgba(253,203,0,0.25), 0 0 30px 10px rgba(253,203,0,0.15);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ---------- 8. Section Base ---------- */
+section {
+  margin-block: var(--space-l);
+  background: #fff;
+  padding: var(--space-m) 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+section h2 {
+  color: var(--clr-secondary);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+/* ---------- 9. Card Grids ---------- */
+.services, .why-us, .packages, .gallery {
+  display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;
+}
+.service, .why, .package {
+  flex: 1 1 clamp(220px, 32%, 260px);
+  padding: 1.2rem;
+  background: var(--clr-accent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+  position: relative;
+}
+.service:hover, .why:hover, .package:hover {
+  box-shadow: 0 8px 32px rgba(253,203,0,0.16);
+  transform: translateY(-6px) scale(1.04);
+}
+.service i, .why i {
+  font-size: 2.2rem;
+  color: var(--clr-primary);
+  margin-bottom: .5rem;
+}
+.package ul { list-style: none; margin: .8rem 0 1rem 0; padding: 0; }
+.package ul li { margin-bottom: .4rem; }
+
+/* ---------- 10. Gallery ---------- */
+.gallery-img {
+  flex: 1 1 clamp(150px, 28%, 200px);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.gallery-img img {
+  width: 100%; height: 160px; object-fit: cover; display: block;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.gallery-img:hover img {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 4px 16px rgba(253,203,0,0.13);
+}
+
+/* ---------- 11. Testimonials ---------- */
+.testimonials { display: flex; flex-direction: column; gap: 1.5rem; }
+.testimonial {
+  position: relative;
+  padding: 1.2rem 1.5rem;
+  background: var(--clr-accent);
+  border-left: 4px solid var(--clr-primary);
+  font-style: italic;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.testimonial:hover {
+  box-shadow: 0 8px 32px rgba(253,203,0,0.12);
+  transform: scale(1.02) translateY(-4px);
+}
+.testimonial span {
+  display: block;
+  margin-top: .6rem;
+  font-weight: 600;
+  color: var(--clr-secondary);
+  font-style: normal;
+}
+
+/* ---------- 12. Contact Form ---------- */
+.contact-form {
+  background: var(--clr-accent);
+  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  max-width: 340px;
+  margin-inline: auto;
+}
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--clr-secondary);
+  margin-bottom: .3em;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: .7em;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-400);
+  font-family: inherit;
+  margin-bottom: 1rem;
+  transition: border .22s var(--ease), box-shadow .22s var(--ease);
+  background: #fff;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(253,203,0,0.18);
+  outline: none;
+}
+
+/* ---------- 13. Footer ---------- */
+footer {
+  background: var(--clr-secondary);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0 1rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-size: var(--fs-400);
+  box-shadow: 0 -2px 12px rgba(23,76,60,0.08);
+}
+.footer-content {
+  display: flex; flex-wrap: wrap; gap: 2rem;
+  justify-content: space-between; align-items: flex-start;
+  width: min(90%, 1100px); margin-inline: auto;
+}
+.footer-brand img {
+  width: 60px; height: 60px; border-radius: 50%;
+  border: 2px solid var(--clr-primary); background: #fff; margin-bottom: .75rem;
+}
+.footer-links ul { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: .4rem; }
+.footer-links a { color: #fff; transition: color .22s var(--ease); }
+.footer-links a:hover { color: var(--clr-primary); }
+.footer-contact a { color: #fff; font-weight: 600; transition: color .22s var(--ease); }
+.footer-contact a:hover { color: var(--clr-primary); }
+.footer-bottom { margin-top: 1.5rem; font-size: .95rem; color: #eee; text-align: center; }
+
+/* ---------- 14. Responsive Design ---------- */
+@media (max-width: 900px) {
+  .footer-content { flex-direction: column; align-items: center; text-align: center; gap: 1em; }
+  .footer-brand, .footer-links, .footer-contact { text-align: center; }
+}
+@media (max-width: 700px) {
+  nav { gap: 1rem; }
+  .hero h1 { font-size: 2rem; }
+  section { padding: 1.2rem .75rem; }
+}
+@media (max-width: 500px) {
+  .contact-form { max-width: 95%; }
+  .logo-img { width: 80px; height: 80px; }
+  .footer-brand img { width: 45px; height: 45px; }
+}
+
+/* ---------- 15. Dark Mode (Elite) ---------- */
+@media (prefers-color-scheme: dark) {
+  html, body { background: var(--clr-bg-dark); color: var(--clr-text-light); }
+  section, .contact-form, .testimonial, .service, .why, .package, .gallery-img { background: #212325; color: #fff; }
+  .hero { background: linear-gradient(120deg, #232a2e 0%, #333 100%); }
+  .brand-title, h2 { color: var(--clr-primary); }
+  .footer-content, footer { background: #1b1e1f; color: #eee; }
+  .footer-links a, .footer-contact a { color: #eee; }
+  nav a { color: #eee; }
+  nav a:hover { color: var(--clr-primary); background: #232a2e; }
+  .cta-btn, .contact-form button { background: var(--gradient-btn); color: var(--clr-secondary-dark);}
+}
+
+/* ---------- 16. Accessibility & Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
+
